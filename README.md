@@ -1,7 +1,8 @@
 # Machine-Learning Projects on
 
 - Advanced Regression (Ridge & Lasso Model)
-- Advance regression assignment + SVM (Optional)
+- Advance regression assignment (House Price Prediction)
+- SVM 
 - Tree Models Decision Tree
 - Tree Models Random Forest
 - Boosting
