@@ -1,4 +1,4 @@
-# Machine-Learning Projects
+# Machine-Learning Projects on
 
 - Advanced Regression (Ridge & Lasso Model)
 - Advance regression assignment + SVM (Optional)
@@ -12,3 +12,4 @@
   - K means clustering
   - Hierarchical clustering
 - PCA
+- Telecom Churn Case study
