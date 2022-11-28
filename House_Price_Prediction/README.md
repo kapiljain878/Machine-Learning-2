@@ -48,29 +48,32 @@ For the same purpose, the company has collected a data set from the sale of hous
 
 
 #### Ridge Regression
-- Optimum alpha for Ridge is 10.000000
-- Ridge Regression with 10.0
+
+Optimum alpha for ridge is 7.000000
+
+ridge Regression with 7.0
 
 ===================================
-* R2_score (train) : 0.9099792685238111
-* R2_score (test) : 0.8987501807731075
-* RMSE (train) : 0.11987714672785361
-* RMSE (test) : 0.12680116170772152
+* R2_score (train) : 0.9077334882376522
+* R2_score (test) : 0.8925769957399065
+* RMSE (train) : 0.12136324489244739
+* RMSE (test) : 0.13060949526791424
 
-***Comment:*** Ridge regression model was able to acheieve R2 score of 0.89875 on the test data i.e. 89.88% of the variance in test data can be explained by the model. Root Mean Square Error = 0.1268 on test data, that means the prediction made by the model can off  by 0.1268 unit.
+***Comment:*** Ridge regression model was able to acheieve R2 score of 0.89257 on the test data i.e. 89.26% of the variance in test data can be explained by the model. Root Mean Square Error = 0.1306 on test data, that means the prediction made by the model can off  by 0.1306 unit.
 
 #### Lasso Regression
+
 Optimum alpha for lasso is 0.001000
 
-Lasso Regression with 0.001
+lasso Regression with 0.001
 
 ===================================
-* R2_score (train) : 0.9092384262190387
-* R2_score (test) : 0.8992035193146645
-* RMSE (train) : 0.12036941161238388
-* RMSE (test) : 0.1265169718517261
+* R2_score (train) : 0.9070430079508522
+* R2_score (test) : 0.8943856893113162
+* RMSE (train) : 0.12181651191342997
+* RMSE (test) : 0.12950528400000438
 
-***Comment:*** Lasso regression model was able to acheieve R2 score of 0.8992 on the test data i.e. 89.92% of the variance in test data can be explained by the model. Root Mean Square Error = 0.1265 on test data, that means the prediction made by the model can off  by 0.1265 unit.
+***Comment:*** Lasso regression model was able to acheieve R2 score of 0.8943 on the test data i.e. 89.43% of the variance in test data can be explained by the model. Root Mean Square Error = 0.1295 on test data, that means the prediction made by the model can off  by 0.1295 unit.
 
 #### Final Model
 * Lasso Regression produced slightly better R2 score than Ridge Regression. Choosing Lasso as the final model.
@@ -104,7 +107,7 @@ observed for change in individual features.
 
 
 - Ridge and Lasso Regression Model are built with optimum alpha calculated in GridSearchCV method.
-Optimum alpha = 10.0 for ridge and 0.001 for lasso model.
+Optimum alpha = 7.0 for ridge and 0.001 for lasso model.
 
 
 - Model evaluation is done with R2 score and Root Mean Square Error.
@@ -113,24 +116,14 @@ Optimum alpha = 10.0 for ridge and 0.001 for lasso model.
 - Lasso Regression is chosen as final model for having slightly better R-square value on test data.
 
 
-- Out of 45 features in the final model, top 10 features in order of descending importance are ['1stFlrSF', '2ndFlrSF', 'OverallQual', 'BsmtFinSF1', 'OverallCond','LotArea', 'MSZoning_RL', 'SaleCondition_Normal', 'Condition1_Norm','SaleType_New']
-
-   - 1stFlrSF	0.121192
-   - 2ndFlrSF	0.110654
-   - OverallQual	0.088439
-   - BsmtFinSF1	0.047700
-   - OverallCond	0.044622
-   - LotArea	0.032116
-   - MSZoning_RL	0.027356
-   - SaleCondition_Normal	0.026485
-   - Condition1_Norm	0.024909
-   - SaleType_New	0.024793
+- Out of 45 features in the final model, top 10 features in order of descending importance are: -  ['1stFlrSF', '2ndFlrSF', 'OverallQual', 'BsmtFinSF1', 'OverallCond','LotArea', 'MSZoning_RL', 'SaleCondition_Normal', 'Condition1_Norm','SaleType_New']
 
 
 - Model coefficients are listed in a table along with the corresponding features , for example natural log of SalePrice will change by 0.121192 with unit change in the feature '1stFlrSF' when all the features remain constant. Negative sign in the coefficient signifies negative correlation between the predictor and target variable. 
 
 
 - Predicted value of SalePrice is tranformed into its original scale by performing antilog. 
+
 
 
 
